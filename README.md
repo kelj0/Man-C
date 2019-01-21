@@ -1,8 +1,8 @@
 # C Notes
 
-[Hello_world](#hello-world)
-[Printing](#printing)
-[Loops](#loops)
+* [Hello_world](#hello-world)
+* [Printing](#printing)
+* [Loops](#loops)
 
 ---
 
