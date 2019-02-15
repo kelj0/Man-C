@@ -1,6 +1,7 @@
 # C Notes
 
-* [Hello_world](#hello-world)
+* [Hello world](#hello-world)
+* [Variables](#variables)
 * [Printing](#printing)
 * [Loops](#loops)
 
@@ -16,12 +17,19 @@ int main(){
 }
 ```
 
+#####  Variables<a name="variables"></a>
+```c
+int a = 20;
+int b = 10;
+printf("a == %d , b == %d\n", a,b)
+// a == 20 , b == 10
+```
+
 ##### Printing<a name="printing"></a>
 ```c
 #include <stdio.h>
 
 int main(){
-
     printf("Hey");
     //Hey
 
@@ -40,19 +48,18 @@ int main(){
 
 ##### Loops<a name="loops"></a>
 ```c
-#include <stdio.h>
 
-int main(){
-    int count = 0;
-    while(count<10){
-        printf("Counting up to 10 -> %d",count);
-        count++;        
-    }
-    return 0;
+// while
+int count = 0;
+while(count<10){
+    printf("Counting up to 10 -> %d",count);
+    count++;
+}
+
+//for
+for(int i = 1; i<11;++i){
+    printf("counting to 10 -> %d" % i)
 }
 
 ```
-
-
-
 
