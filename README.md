@@ -4,7 +4,7 @@
 * [Variables](#variables)
 * [Printing](#printing)
 * [Loops](#loops)
-
+* [Symbolic constants](#symbolic-constants)
 ---
 
 ##### Hello world<a name="hello-world"></a>
@@ -60,6 +60,26 @@ while(count<10){
 for(int i = 1; i<11;++i){
     printf("counting to 10 -> %d" % i)
 }
-
 ```
+
+##### Symbolic constants<a name="symbolic-constatns"></a>
+```c
+//its a bad practice to bury "magic numbers" in a program etc
+#include <stdio.h>
+
+#define LOWER 0
+#define UPPER 10
+#define STEP 1
+
+int main(){
+    for(int i = LOWER;i<UPPER;i+=STEP){
+        printf("i is %d\n", i);
+    }
+}
+// as you can see we here use define
+// A #define line defines a symbolic name or symbolic constant to be a particular string of chars
+// #define name replacement list
+ 
+```
+
 
