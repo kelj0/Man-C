@@ -84,7 +84,6 @@ n - Nothing printed
    sign (+ or -) even for positive numbers. By default, 
    only negative numbers are preceded with a -ve sign.
 
-
 (space) - If no sign is going to be written, a blank 
           space is inserted before the value.
 # - Used with o, x or X specifiers the value is preceded 
