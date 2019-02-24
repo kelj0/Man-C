@@ -43,6 +43,79 @@ int main(){
     */
     return 0;
 }
+
+/*
+FORMAT: 
+printf("%[flags][width][.precision][length]specifier",X);
+
+/============================\
+|         Specifiers         |
+\============================/
+
+c  Character
+d  Signed decimal integer
+i  Signed decimal integer
+e  Scientific notation (mantissa/exponent) using e character
+E  Scientific notation (mantissa/exponent) using E character
+f  Decimal floating point
+g  Uses the shorter of %e or %f 	
+G  Uses the shorter of %E or %f
+o  Signed octal
+s  String of characters
+u  Unsigned decimal integer 	
+x  Unsigned hexadecimal integer	
+X  Unsigned hexadecimal integer (capital letters) 	
+p  Pointer address
+n  Nothing printed
+%  Character
+
+/============================\
+|            Flags           |
+\============================/
+-  Left-justify within the given field width; 
+   Right justification is the default
+   Examples:
+    printf("<%-5d>",1); // <     1>
+    printf("<%-5d>",1); // <1     >
+    printf("<%d>",1);   // <1>
+
++ Forces to precede the result with a plus or minus 
+  sign (+ or -) even for positive numbers. By default, 
+  only negative numbers are preceded with a -ve sign.
+
+
+(space) If no sign is going to be written, a blank 
+        space is inserted before the value.
+# Used with o, x or X specifiers the value is preceded 
+  with 0, 0x or 0X respectively for values different than 
+  zero. Used with e, E and f, it forces the written output 
+  to contain a decimal point even if no digits would follow. 
+  By default, if no digits follow, no decimal point is written. 
+  Used with g or G the result is the same as with e or E but 
+  trailing zeros are not removed.
+  Example:
+    printf ("%d %#x %#o",100, 100, 100); // 100 0x64 0144 
+
+0 Left-pads the number with zeroes (0) instead of spaces, 
+  where padding is specified (see width sub-specifier).
+  Example:
+    printf("Preceding with zeros: %07d \n", 1977); // 0001977
+
+
+/============================\
+|    Length & Description    |
+\============================/
+h The argument is interpreted as a short int or unsigned 
+  short int (only applies to integer specifiers: i, d, o, u, x and X).
+
+l The argument is interpreted as a long int or unsigned long 
+  int for integer specifiers (i, d, o, u, x and X), and as a 
+  wide character or wide character string for specifiers c and s.
+
+L The argument is interpreted as a long double 
+  (only applies to floating point specifiers: e, E, f, g and G).
+
+*/
 ```
 
 ##### Loops<a name="loops"></a>
@@ -55,10 +128,20 @@ while(count<10){
     count++;
 }
 
+// using while loop to count chars in input
+int nc;
+while(getchar() != EOF)
+    ++nc;
+printf("%d\n",nc);
+
 //for
 for(int i = 1; i<11;++i){
     printf("counting to 10 -> %d" % i)
 }
+//using for loop to count chars in input
+
+
+
 ```
 
 ##### Symbolic constants<a name="symbolic-constatns"></a>
@@ -119,4 +202,9 @@ int main(){
 }
 
 ```
+
+
+
+
+
 
