@@ -1,4 +1,4 @@
-# C Notes
+# C Notes [work in progress]
 
 * [Hello world](#hello-world)
 * [Variables](#variables)
