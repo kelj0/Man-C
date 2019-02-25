@@ -5,6 +5,7 @@
 * [Printing](#printing)
 * [Loops](#loops)
 * [Arrays](#arrays)
+* [Functions](#functions)
 * [Symbolic constants](#symbolic-constants)
 * [CharacterIO](#charIO)
 ---
@@ -156,6 +157,41 @@ for(int i = 0;i<3;++i)
 //arr[1] == 2
 //arr[2] == 3
 ```
+
+##### Functions<a name="functions"></a>
+```c
+/*
+return-type function-name(parametar declarations, if any){
+    declarations
+    statements
+    (return if not void)
+}
+*/
+
+
+int power(int m, int n); // this is a function declaration 
+// power takes 2 parametars (2 ints) and returns int
+
+int power(int m, int n){        // + 
+    int p = 1;                  // | this is a function definition
+    for(int i = 1;i <= n; ++i)  // |
+        p = p * m;              // |
+    return p;                   // |
+}                               // +
+
+// we can also return nothing (void)
+void printHello(){
+    printf("Hello from function :)"); 
+}
+
+// we can call it later in program like this
+int Two_to_the_power_of_three = power(2,3);
+printf("%d\n",Two_to_the_power_of_three); // outputs 8
+
+// we can also call it inline with other functions (if it returns a value)
+printf("%d\n",power(2,3)); // outputs 8
+```
+
 
 ##### Symbolic constants<a name="symbolic-constatns"></a>
 ```c
