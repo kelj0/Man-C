@@ -156,6 +156,17 @@ for(int i = 0;i<3;++i)
 //arr[0] == 1
 //arr[1] == 2
 //arr[2] == 3
+
+// Initialize array with etc zeroes
+int arr[5] = {0};
+for(unsigned i = 0 ; i<5;++i)
+    printf("arr[%d] == %d\n",i,arr[i]);
+//arr[0] == 0
+//arr[1] == 0
+//arr[2] == 0
+//arr[3] == 0
+//arr[4] == 0
+
 ```
 
 ##### Functions<a name="functions"></a>
@@ -245,7 +256,7 @@ enough to hold EOF in addition to any possible char. Therefore we use int.
 #include <stdio.h>
 int main(){
     int c;
-    while((c = getchar()) != EOF) // we can store value in c in while check
+    while((c = getchar()) != EOF) // we can store value in c while checking
         putchar(c);
     return 0;
 }
