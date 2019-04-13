@@ -22,10 +22,40 @@ int main(){
 
 #####  Variables<a name="variables"></a>
 ```c
+// unsigned >= 0 
+
+// int 
 int a = 20;
 int b = 10;
 printf("a == %d , b == %d\n", a,b)
 // a == 20 , b == 10
+
+// char
+char s = 's';
+
+// string is char array with \0 on end
+char str[] = {'t','e','s','t','\0'}; // \0 is needed if we want to print it as string
+prinf("%s", str);
+//  test
+
+//enum
+enum boolean {NO, YES};
+// the first name in enum has value 0, the next 1 and so on, unless explicit values are specified
+enum months {JAN = 1, FEB, MAR, APR, MAY, JUN,
+             JUL, AUG, SEP, OCT, NOV, DEC};
+             /* FEB=2, MAR=3... */
+
+// Declarations
+int a,b,c;
+// same as
+int a;
+int b;
+int c;
+
+/* const -> can be applied to the declaration of any variable to 
+            specify that its value will not be changed */
+const int a = 10;
+
 ```
 
 ##### Printing<a name="printing"></a>
@@ -262,8 +292,6 @@ int main(){
 }
 
 ```
-
-
 
 
 
