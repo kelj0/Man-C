@@ -2,6 +2,8 @@
 
 * [Hello world](#hello-world)
 * [Variables](#variables)
+* [Operators](#operators)
+* [Conditional Expressions](#conditional)
 * [Printing](#printing)
 * [Loops](#loops)
 * [Arrays](#arrays)
@@ -57,6 +59,107 @@ int c;
 const int a = 10;
 
 ```
+
+##### Operators<a name="operators"></a>
+```c
+
+/*
+    // +
+     1+1 = 2
+    // -
+     1-1 = 0
+    // /
+     3/2 = 1
+    // *
+     3*2 = 6
+    // %
+     5%3 = 2
+    // <
+     1<2 = true
+    // >
+     1>2 = false
+    // <=
+     2<=2 = true
+    // >=
+     2<=3 = true
+    // ==
+     2==3 = false
+    // !=
+     2!=3 = true
+    // &&
+     true && false = false
+     true && true = true
+    // ||
+     true || false = true
+     true || true = true
+     false || false = false
+    // bitwise operators
+    // &
+     1&2 = 0
+     |01|
+     |10|
+      00
+    // |
+     1|2 = 3
+     |01|
+     |10|
+      11
+    // ^
+     2^3 = 1    5^1 = 4
+     |11|       |101|
+     |10|       |001|
+      01         100
+    // ~
+     ~2 = 1     ~4 = 3
+     |10|       |100|
+      01         011
+    // >>
+     2<<1 = 4
+     |0010|
+      0100
+     4<<1 = 8
+     |0100|
+      1000
+    // <<
+     2>>1 = 1
+     |10|
+      01
+*/
+```
+
+##### Conditional Expressions<a name="conditional"></a>
+```c
+
+// lets say you want to assign a to z if a is bigger than b
+if(a > b){
+    z = a;
+}
+else {
+    z = b;
+}
+
+// if its one line in if you can remove '{' , '}'
+if(a < b)
+    z = a;
+else
+    z = b;
+
+// or you can use ternary operator
+z = (a>b)? a : b;
+//  works like this
+// expr1 ? expr2 : expr3
+// expr1 is evaluated first, if it is non-zero(true), then expr2 is evaluated, otherwise expr3 is evaluated
+// parentheses are not necessary arount the expr1 since precedence of ?: is very low, just above asssignment
+
+// else if
+if(a<b)
+    // a is < b
+else if(a==b)
+    // a is == b
+else
+    // a is > b
+```
+
 
 ##### Printing<a name="printing"></a>
 ```c
