@@ -158,6 +158,28 @@ else if(a==b)
     // a is == b
 else
     // a is > b
+
+
+// switch
+switch(expression){
+    case const-expr: statements break;
+    case const-expr: statements break;
+    default: statements
+}
+// default is executed if none of the other cases are satisfied, default is optional
+//simple example
+int c = getchar();
+switch(c){
+    case 'y': 
+        install(); // if you inputed y , install X
+        break;
+    case 'n':
+        quit();   // if you inputed n, we exit
+        break;
+    default:
+        call_menu(); // if you inputed something else, we will ask you again
+        break;
+}
 ```
 
 
@@ -279,6 +301,11 @@ int nc;
 for (nc = 0; gechar() != EOF; ++nc)
     ; // we need to add empty body in cause we do all calculations in for (isolated ; is called null sattement)
 printf("%d\n", nc);
+
+// the "infinite" for loop, presumably to be broken by other means such as a break or return
+for(;;){
+    // ..
+}
 ```
 
 ##### Arrays<a name="arrays"></a>
