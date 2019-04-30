@@ -391,7 +391,35 @@ int main(){
 // as you can see we here use define
 // A #define line defines a symbolic name or symbolic constant to be a particular string of chars
 // #define name replacement list
- 
+
+// is is also possible to define macros with arguments
+#define max(A,B) ((A) > (B) ? (A) : (B))
+x = max(p+q,r+s);
+//will be replaced with this line
+x = max((p+q) > (r+s) ? (p+q) : (r+s));
+
+// we can concentate args during macro expansion
+#define paste(front,back) front ## back
+// so paste(name,1) creates token name1
+
+// conditional inclusion
+#if SYSTEM == SYSV
+    #define HDR "sysv.h"
+#elif SYSTEM == BSD
+    #define HDR "bsd.h"
+#elif SYSTEM == MSDOS
+    #define HDR "msdos.h"
+#else
+    #define HDR "default.h"
+#endif
+#include HDR
+
+/*The #ifdef and #ifndef lines are specialized forms that test whether a 
+name is defined. The first example of #if above could have been written*/
+#ifndef HDR
+#defineHDR
+/* contents of hdr.h go here*/
+#endif
 ```
 
 ##### CharacterIO<a name="charIO"></a>
