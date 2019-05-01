@@ -7,6 +7,7 @@
 * [Printing](#printing)
 * [Loops](#loops)
 * [Arrays](#arrays)
+* [Pointers](#pointers)
 * [Functions](#functions)
 * [Symbolic constants](#symbolic-constants)
 * [CharacterIO](#charIO)
@@ -329,7 +330,7 @@ for(int i = 0;i<3;++i)
 
 // Initialize array with etc zeroes
 int arr[5] = {0};
-for(unsigned i = 0 ; i<5;++i)
+for(unsigned i = 0;i<5;++i)
     printf("arr[%d] == %d\n",i,arr[i]);
 //arr[0] == 0
 //arr[1] == 0
@@ -338,6 +339,32 @@ for(unsigned i = 0 ; i<5;++i)
 //arr[4] == 0
 
 ```
+
+##### Pointers<a name="pointers"></a>
+```c
+int c = 1;
+int *pc = &c; //*(pointer),&(address)
+// pc value is now address of variable c
+// to access value of adress we need to dereference it
+*pc == 1; // true
+// if we print pc, we will get address of c, if we print *pc we'll get value of c
+*pc = 10; // value on adress pc is now 10, it means our variable c is 10
+
+
+// working with arrays
+int a[10];
+int *pa = &a[0];
+// pa now points to first element of a
+// *pa would give us value of a[0]
+// pa++, now pa point to second element (a[1])
+// *pa gives us value of a[1]
+// pa--, pa point back on first element of a
+// and so on..
+
+
+```
+
+
 
 ##### Functions<a name="functions"></a>
 ```c
